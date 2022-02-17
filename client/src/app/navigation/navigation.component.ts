@@ -11,13 +11,11 @@ import { ToastrService } from 'ngx-toastr';
 export class NavigationComponent implements OnInit {
 
   model: any = {};
-  id = 1
 
 	constructor(public accountService: AccountService, private router: Router, 
               private toastr: ToastrService) {}
 
 	ngOnInit(): void {
-    this.id = 1
   }
 
   Login() {
