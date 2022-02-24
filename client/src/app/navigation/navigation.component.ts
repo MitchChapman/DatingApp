@@ -12,18 +12,15 @@ export class NavigationComponent implements OnInit {
 
   model: any = {};
 
-	constructor(public accountService: AccountService, private router: Router, 
-              private toastr: ToastrService) {}
+	constructor(public accountService: AccountService, private router: Router) {}
 
 	ngOnInit(): void {
   }
 
   Login() {
-    console.log(this.model);
     this.accountService.Login(this.model).subscribe(
       (response) => {
         this.router.navigate(['members']);
-        console.log(response);
       }
     );
   }
